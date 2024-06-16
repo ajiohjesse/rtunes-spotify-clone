@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useMemo } from 'react';
-import { BiSearch } from 'react-icons/bi';
+import { BiMusic, BiSearch } from 'react-icons/bi';
 import { HiHome } from 'react-icons/hi';
 import Box from './box';
 import SidebarItem from './sidebar-item';
@@ -39,6 +39,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
       <div className="hidden md:flex flex-col gap-y-2 bg-black h-full w-[300px] p-2">
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
+            <div className="">
+              <p className="text-green-500 flex items-center gap-2 font-bold uppercase text-2xl">
+                <BiMusic className="inline" />
+                R-Tunes
+              </p>
+              <p className="text-sm text-neutral-400">Just like spotify...</p>
+            </div>
             {routes.map(item => (
               <SidebarItem key={item.label} {...item} />
             ))}
