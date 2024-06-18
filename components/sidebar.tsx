@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
                 <BiMusic className="inline" />
                 R-Tunes
               </p>
-              <p className="text-sm text-neutral-400">Just like spotify...</p>
+              <p className="text-sm text-neutral-400">Feel the music...</p>
             </div>
             {routes.map(item => (
               <SidebarItem key={item.label} {...item} />

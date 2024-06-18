@@ -8,6 +8,6 @@ export async function middleware(req: NextRequest) {
     res,
   });
 
-  await supabase.auth.getSession();
+  await supabase.auth.getUser();
   return res;
 }
